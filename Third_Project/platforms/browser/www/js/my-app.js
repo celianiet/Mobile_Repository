@@ -94,9 +94,10 @@ function OpenCage (){
         console.log(responseJSON);
         var city = responseJSON.results[0].components.city;
         var country = responseJSON.results[0].components.country;
+        var county = responseJSON.results[0].components.county;
         var currency = responseJSON.results[0].annotations.currency.name;
 
-        var opencage = "city :" + city + "<br/> country: " + country +"<br/> currency: " + currency;
+        var opencage = "city :" + city + "<br/> country: " + country + "<br/> county: " + county +"<br/> currency: " + currency;
 
         document.getElementById('opencage').innerHTML = opencage;
     }
